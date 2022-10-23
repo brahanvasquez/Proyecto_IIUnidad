@@ -56,7 +56,7 @@ namespace Datos
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
             }

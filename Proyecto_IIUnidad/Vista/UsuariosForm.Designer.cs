@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -46,13 +47,15 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(69, 23);
+            this.label1.Location = new System.Drawing.Point(62, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 17);
             this.label1.TabIndex = 0;
@@ -61,7 +64,7 @@
             // txtCodigo
             // 
             this.txtCodigo.Enabled = false;
-            this.txtCodigo.Location = new System.Drawing.Point(130, 20);
+            this.txtCodigo.Location = new System.Drawing.Point(123, 30);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(283, 25);
             this.txtCodigo.TabIndex = 1;
@@ -69,7 +72,7 @@
             // txtNombre
             // 
             this.txtNombre.Enabled = false;
-            this.txtNombre.Location = new System.Drawing.Point(130, 51);
+            this.txtNombre.Location = new System.Drawing.Point(123, 61);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(283, 25);
             this.txtNombre.TabIndex = 3;
@@ -77,7 +80,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(63, 54);
+            this.label2.Location = new System.Drawing.Point(56, 64);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 17);
             this.label2.TabIndex = 2;
@@ -86,7 +89,7 @@
             // txtClave
             // 
             this.txtClave.Enabled = false;
-            this.txtClave.Location = new System.Drawing.Point(130, 82);
+            this.txtClave.Location = new System.Drawing.Point(123, 92);
             this.txtClave.Name = "txtClave";
             this.txtClave.PasswordChar = '*';
             this.txtClave.Size = new System.Drawing.Size(283, 25);
@@ -95,7 +98,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(81, 85);
+            this.label3.Location = new System.Drawing.Point(74, 95);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 17);
             this.label3.TabIndex = 4;
@@ -104,7 +107,7 @@
             // txtCorreo
             // 
             this.txtCorreo.Enabled = false;
-            this.txtCorreo.Location = new System.Drawing.Point(130, 113);
+            this.txtCorreo.Location = new System.Drawing.Point(123, 123);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(283, 25);
             this.txtCorreo.TabIndex = 7;
@@ -112,7 +115,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(71, 116);
+            this.label4.Location = new System.Drawing.Point(64, 126);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 17);
             this.label4.TabIndex = 6;
@@ -125,7 +128,7 @@
             this.cbbRol.Items.AddRange(new object[] {
             "Administrador",
             "Usuario"});
-            this.cbbRol.Location = new System.Drawing.Point(130, 144);
+            this.cbbRol.Location = new System.Drawing.Point(123, 154);
             this.cbbRol.Name = "cbbRol";
             this.cbbRol.Size = new System.Drawing.Size(283, 25);
             this.cbbRol.TabIndex = 8;
@@ -133,7 +136,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(93, 147);
+            this.label5.Location = new System.Drawing.Point(86, 157);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(30, 17);
             this.label5.TabIndex = 9;
@@ -142,7 +145,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(165, 187);
+            this.label6.Location = new System.Drawing.Point(158, 197);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(73, 17);
             this.label6.TabIndex = 10;
@@ -152,7 +155,7 @@
             // 
             this.cbActivo.AutoSize = true;
             this.cbActivo.Enabled = false;
-            this.cbActivo.Location = new System.Drawing.Point(245, 189);
+            this.cbActivo.Location = new System.Drawing.Point(238, 199);
             this.cbActivo.Name = "cbActivo";
             this.cbActivo.Size = new System.Drawing.Size(15, 14);
             this.cbActivo.TabIndex = 11;
@@ -160,7 +163,7 @@
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(475, 9);
+            this.btnNuevo.Location = new System.Drawing.Point(468, 19);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(92, 32);
             this.btnNuevo.TabIndex = 12;
@@ -177,39 +180,42 @@
             this.dgvUsuarios.Location = new System.Drawing.Point(2, 227);
             this.dgvUsuarios.Name = "dgvUsuarios";
             this.dgvUsuarios.RowTemplate.Height = 25;
-            this.dgvUsuarios.Size = new System.Drawing.Size(605, 130);
+            this.dgvUsuarios.Size = new System.Drawing.Size(629, 130);
             this.dgvUsuarios.TabIndex = 13;
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(475, 47);
+            this.btnModificar.Location = new System.Drawing.Point(468, 57);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(91, 32);
             this.btnModificar.TabIndex = 14;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(475, 85);
+            this.btnGuardar.Location = new System.Drawing.Point(468, 95);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(91, 32);
             this.btnGuardar.TabIndex = 15;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(475, 123);
+            this.btnEliminar.Location = new System.Drawing.Point(468, 133);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(91, 32);
             this.btnEliminar.TabIndex = 16;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(475, 161);
+            this.btnCancelar.Location = new System.Drawing.Point(468, 171);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(91, 32);
             this.btnCancelar.TabIndex = 17;
@@ -217,11 +223,15 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // UsuariosForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(610, 362);
+            this.ClientSize = new System.Drawing.Size(634, 362);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnGuardar);
@@ -245,6 +255,7 @@
             this.Text = "UsuariosForm";
             this.Load += new System.EventHandler(this.UsuariosForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -270,5 +281,6 @@
         private Button btnGuardar;
         private Button btnEliminar;
         private Button btnCancelar;
+        private ErrorProvider errorProvider1;
     }
 }
