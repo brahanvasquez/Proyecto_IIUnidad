@@ -43,7 +43,7 @@ namespace Datos
             DataTable dt = new DataTable();
             try
             {
-                string sql = "SELECT * FROM usuario";
+                string sql = "SELECT * FROM usuario;";
 
                 using (MySqlConnection _conexion = new MySqlConnection(CadenaConexion.Cadena))
                 {
@@ -68,7 +68,7 @@ namespace Datos
             bool inserto = false;
             try
             {
-                string sql = "INSERT INTO usuario VALUES (@Codigo, @Nombre, @Clave, @Correo, @Rol, @EstaActivo)";
+                string sql = "INSERT INTO usuario VALUES (@Codigo, @Nombre, @Clave, @Correo, @Rol, @EstaActivo);";
 
                 using (MySqlConnection _conexion = new MySqlConnection(CadenaConexion.Cadena))
                 {
@@ -100,7 +100,7 @@ namespace Datos
             bool actualizo=false;
             try
             {
-                string sql = "UPDATE usuario SET Nombre=@Nombre, Clave=@Clave, Correo=@Correo, Rol=@Rol, EstaActivo=@EstaActivo WHERE Codigo=@Codigo";
+                string sql = "UPDATE usuario SET Nombre=@Nombre, Clave=@Clave, Correo=@Correo, Rol=@Rol, EstaActivo=@EstaActivo WHERE Codigo=@Codigo;";
 
                 using (MySqlConnection _conexion = new MySqlConnection(CadenaConexion.Cadena))
                 {
@@ -133,7 +133,7 @@ namespace Datos
             bool elimino = false;
             try
             {
-                string sql = "DELETE FROM usuario WHERE Codigo=@Codigo";
+                string sql = "DELETE FROM usuario WHERE Codigo=@Codigo;";
 
                 using (MySqlConnection _conexion = new MySqlConnection(CadenaConexion.Cadena))
                 {
