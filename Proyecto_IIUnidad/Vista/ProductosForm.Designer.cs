@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
@@ -47,8 +48,10 @@
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.picbImagen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -92,6 +95,7 @@
             this.txtExistencia.Name = "txtExistencia";
             this.txtExistencia.Size = new System.Drawing.Size(222, 25);
             this.txtExistencia.TabIndex = 5;
+            this.txtExistencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtExistencia_KeyPress);
             // 
             // label3
             // 
@@ -109,6 +113,7 @@
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(222, 25);
             this.txtPrecio.TabIndex = 7;
+            this.txtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecio_KeyPress);
             // 
             // label4
             // 
@@ -144,6 +149,7 @@
             this.picbImagen.Location = new System.Drawing.Point(382, 49);
             this.picbImagen.Name = "picbImagen";
             this.picbImagen.Size = new System.Drawing.Size(181, 126);
+            this.picbImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picbImagen.TabIndex = 10;
             this.picbImagen.TabStop = false;
             // 
@@ -165,6 +171,7 @@
             this.btnAdjuntar.TabIndex = 12;
             this.btnAdjuntar.Text = "Adjuntar...";
             this.btnAdjuntar.UseVisualStyleBackColor = true;
+            this.btnAdjuntar.Click += new System.EventHandler(this.btnAdjuntar_Click);
             // 
             // btnCancelar
             // 
@@ -183,6 +190,7 @@
             this.btnEliminar.TabIndex = 21;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnGuardar
             // 
@@ -192,6 +200,7 @@
             this.btnGuardar.TabIndex = 20;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnModificar
             // 
@@ -201,6 +210,7 @@
             this.btnModificar.TabIndex = 19;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnNuevo
             // 
@@ -223,6 +233,10 @@
             this.dgvProductos.RowTemplate.Height = 25;
             this.dgvProductos.Size = new System.Drawing.Size(584, 104);
             this.dgvProductos.TabIndex = 23;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // ProductosForm
             // 
@@ -254,6 +268,7 @@
             this.Load += new System.EventHandler(this.ProductosForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picbImagen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -280,5 +295,6 @@
         private Button btnModificar;
         private Button btnNuevo;
         private DataGridView dgvProductos;
+        private ErrorProvider errorProvider1;
     }
 }

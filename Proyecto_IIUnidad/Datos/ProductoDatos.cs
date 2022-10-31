@@ -127,7 +127,7 @@ namespace Datos
             return elimino;
         }
 
-        public async Task<byte[]> SeleccionarImagenAsync(string codigo)
+        public async Task<byte[]> SeleccionarImagen(string codigo)
         {
             byte[] imagen = new byte[0];
 
